@@ -192,7 +192,8 @@
   /* as duas linhas terminam exatamente na mesma largura */
   function fit() {
     var TRIAL = 100, TRACK = 0.06;
-    var W = Math.min(window.innerWidth * 0.86, 520);
+    var vw = window.innerWidth;
+    var W = Math.min(vw * (vw < 600 ? 0.78 : 0.86), 520);
 
     lines.forEach(function (el) {
       el.style.fontSize = TRIAL + 'px';
